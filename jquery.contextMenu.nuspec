@@ -6,6 +6,9 @@
         <authors>https://github.com/swisnl</authors>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>jQuery contextMenu plugin &amp; polyfill</description>
+        <dependencies>
+            <dependency id="jQuery" version="1.8.2" />
+        </dependencies>
     </metadata>
     <files>
         <file src="dist\font\context-menu-icons.eot" target="content\fonts\context-menu-icons.eot" />
