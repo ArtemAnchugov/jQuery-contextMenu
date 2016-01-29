@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>jquery.contextMenu</id>
+        <version>2.1.0</version>
+        <authors>https://github.com/swisnl</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>jQuery contextMenu plugin &amp; polyfill</description>
+    </metadata>
+    <files>
+        <file src="dist\font\context-menu-icons.eot" target="content\fonts\context-menu-icons.eot" />
+        <file src="dist\font\context-menu-icons.ttf" target="content\fonts\context-menu-icons.ttf" />
+        <file src="dist\font\context-menu-icons.woff" target="content\fonts\context-menu-icons.woff" />
+        <file src="dist\font\context-menu-icons.woff2" target="content\fonts\context-menu-icons.woff2" />
+        <file src="dist\jquery.contextMenu.js" target="content\scripts\jquery.contextMenu.js" />
+        <file src="dist\jquery.contextMenu.min.js" target="content\scripts\jquery.contextMenu.min.js" />
+        <file src="dist\jquery.contextMenu.min.js.map" target="content\scripts\jquery.contextMenu.min.js.map" />
+        <file src="dist\jquery.ui.position.js" target="content\scripts\jquery.ui.position.js" />
+        <file src="dist\jquery.ui.position.min.js" target="content\scripts\jquery.ui.position.min.js" />
+        <file src="dist\jquery.contextMenu.css" target="content\styles\jquery.contextMenu.css" />
+        <file src="dist\jquery.contextMenu.min.css" target="content\styles\jquery.contextMenu.min.css" />
+        <file src="dist\jquery.contextMenu.min.css.map" target="content\styles\jquery.contextMenu.min.css.map" />
+    </files>
+</package>
