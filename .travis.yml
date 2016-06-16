@@ -1,6 +1,10 @@
 language: node_js
 sudo: false
+env:
+  - JQUERY=1
+  - JQUERY=2
 node_js:
-  - "0.12"
-before_script:
-  - "npm install dalek-cli -g"
+  - "stable"
+install:
+  - npm install
+  - npm install jquery@$JQUERY

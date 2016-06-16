@@ -32,6 +32,8 @@ currentMenu: options
 
 To register a new contextMenu:
 
+* Note: For SVG support use jQuery >= 1.12|2.2
+
 ```javascript
 $.contextMenu( options );
 ```
@@ -89,7 +91,7 @@ $.contextMenu({
 });
 
 // select the container with a dom element
-var element = document.getElementById('#context-menus-container');
+var element = document.getElementById('context-menus-container');
 $.contextMenu({
     selector: 'span.context-menu',
     appendTo: element
@@ -101,7 +103,7 @@ $.contextMenu({
 
 Specifies what event on the element specified in the [selector](#selector) triggers the contextmenu. 
 
-`appendTo`: `string` default: `'right'` 
+`trigger`: `string` default: `'right'` 
 
 
 Value | Description
@@ -120,7 +122,6 @@ $.contextMenu({
 });
 
 // trigger on hover
-var element = document.getElementById('#context-menus-container');
 $.contextMenu({
     selector: 'span.context-menu',
     trigger: 'hover'
@@ -304,7 +305,7 @@ $.contextMenu({
 
 ### position
 
-Callback to overide how the position the context menu is de. The function is executed in the context of the trigger object. 
+Callback to override the position of the context menu. The function is executed in the context of the trigger object. 
 
 The first argument is the `$menu` jQuery object, which is the menu element. The second and third arguments are `x` and `y` coordinates provided by the `show` event.
 
@@ -371,7 +372,7 @@ $.contextMenu({
 
 ### build
 
-The callback is executed with two arguments given: the jQuery reference to the triggering element and the original contextemnu event. It is executed without context (so this won't refer to anything useful).
+The callback is executed with two arguments given: the jQuery reference to the triggering element and the original contextmenu event. It is executed without context (so this won't refer to anything useful).
 
 If the build callback is found at registration, the menu is not built right away. The menu creation is delayed to the point where the menu is actually called to show. Dynamic menus don't stay in the DOM. After a menu created with build is hidden, its DOM-footprint is destroyed.
 
@@ -395,4 +396,12 @@ $.contextMenu({
     }
 });
 ```
+
+### itemClickEvent
+
+Allows the selection of the `click` event instead of the `mouseup` event to handle the user mouse interaction with the contexMenu. The default event is `mouseup`. Set the option to `"click"` to change to the `click` event.
+
+`itemClickEvent`: `"click"`
+
+This option is global: the first contexMenu registered sets it. To change it afterwards all the contextMenu have to be unregistered  with `$.contextMenu( 'destroy' );` before the change has effect again.  
 

@@ -103,9 +103,44 @@ Font-Awesome icons used from [encharm/Font-Awesome-SVG-PNG](https://github.com/e
 
 ## Changelog ##
 
-### Unreleased
+### Unreleased ###
+
+#### Added
+
+#### Changed
+
+#### Fixed
+
+#### Documentation
+
+* Fix typo in items options documentation (thanks @nelson6e65)
+
+### 2.2.0 ###
+
+#### Added
+* Add option to show item title as HTML (thanks @brassard)
+* Full Font Awesome support 
+
+#### Changed 
+* Use relative units for css fixes ([Issue #386](https://github.com/swisnl/jQuery-contextMenu/issues/386)) (thanks @RoachMech)
+* Change unicode characters in CSS to readable strings.
+* Improved item styles (thanks @anseki)
+
+#### Fixed 
+* Force woff2 font creation for Windows some machines.
+* Fix so that disabled items can't get focus anymore (thanks @anseki)
+* Fix so menu size is calculated better no items will take up 2 lines again (thanks @anseki)
+* Fix bower.json (thanks @nelson6e65)
+* Fix typo in documentation for "position" and "build" callback (thanks @mmcev106)
+
+### 2.1.1 ###
 
 * Fixed a problem when using the open function with custom arguments (thanks @RareDevil)
+* `width` is increased when repoening menu. Fixed by using outerwidth to calculate width. Fixes #360 (thanks @anseki)
+* Submenus are not collapsed when the menu is closed fixes #358 (thanks @anseki)
+* Small delay in checking for autohide to fix missing the menu by a pixel or two. Fixes #347 (thanks @Risord)
+* Check if an item is not hidden in any way when scrolling through items with the keyboard. Fixes #348
+* Change links and base url of documentation to https as mentioned by @OmgImAlexis in PR#345
 
 ### 2.1.0 ###
 

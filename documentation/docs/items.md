@@ -59,6 +59,28 @@ var items = {
 ```
 
 
+### isHtmlName
+
+When truthy, the defined `name` value is HTML.
+
+The value will be rendered using `$.html()` instead of `$.text()`.
+
+__Note: Cannot be used with the [accesskey](#accesskey) option in the same item.__
+
+`isHtmlName`: `boolean`
+
+#### Example
+
+```javascript
+var items = {
+    firstCommand: {
+        name: "Copy <span style='font-weight: bold'>Text</span>︎",
+        isHtmlName: true
+    }
+}
+```
+
+
 ### callback 
 
 Specifies the callback to execute if clicked on
@@ -144,7 +166,7 @@ Specifies if the command is disabled (`true`) or enabled (`false`).
 
 May be a callback returning a `boolean`. The callback is executed in the context of the triggering object (so this inside the function refers to the element the context menu was shown for). The first argument is the `key` of the command. The second argument is the `options object`.
 
-`disabled`: `string` or `function(itemKey, opt)`
+`disabled`: `boolean` or `function(itemKey, opt)`
 
 #### Example
 
@@ -171,7 +193,7 @@ Specifies if the command is visible (`true`) or not (`false`).
 
 May be a callback returning a boolean. The callback is executed in the context of the triggering object (so this inside the function refers to the element the context menu was shown for). The first argument is the key of the command. The second argument is the `options object`.
 
-`disabled`: `string` or `function(itemKey, opt)`
+`visible`: `boolean` or `function(itemKey, opt)`
 
 #### Example
 
